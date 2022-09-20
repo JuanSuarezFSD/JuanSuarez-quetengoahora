@@ -37,7 +37,7 @@
             ),
         );
 
-        function mostrarcontenido(){
+        function mostrarcontenido($Horario){
             foreach($Horario as $clave => $valor){
                 echo "$clave : ";
                 echo "<br>";
@@ -52,6 +52,40 @@
                     }  
                 }
             }
+
+        function queClase($dia, $hora, $min){ //compararlos con 8:15 en 815 (te ahorras comparar horas y minutos por separado)
+           
+            $horatotal = ($hora * 100) + $min;
+            
+            if($hora>24 or $hora<0 or $minuto<0 or $minuto>60){
+                 echo("Los datos de la hora introducidos son incorrectos.")
+            }else{
+                    if($dia == "Lunes" or $dia =="lunes"){
+                        
+                    }elseif($dia == "Martes" or $dia =="martes"){
+
+                    }elseif($dia == "Miércoles" or $dia =="miércoles"){
+
+                    }elseif($dia == "Jueves" or $dia =="jueves"){
+
+                    }elseif($dia == "Viernes" or $dia =="viernes"){
+
+                    }elseif($dia == "Sábado" or $dia =="sabado"){
+                        echo("El día introducido no hay clases");
+
+                    }elseif($dia == "Domingo" or $dia =="domingo"){
+                        echo("El día introducido no hay clases");
+
+                    }else
+                    echo("No se reconoce el día introducido")
+            }
+               
+                
+
+        }
+
+
+
 
 ?>
 
