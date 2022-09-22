@@ -37,7 +37,8 @@
             ),
         );
 
-        function mostrarcontenido(){
+//Función que muestra por pantalla el horario guardado en el array.
+        function mostrarhorario(){
             global $Horario;
             foreach($Horario as $clave => $valor){
                 echo "<pre>";
@@ -56,12 +57,15 @@
                     }  
                 }
             }
-                
-        function queClase($dia, $hora, $min){ 
+
+//Función que muestra por pantalla la clase actual en función de la hora que sea en el momento de ejecutarlo.
+        function queClase(){ 
            global $Horario;
-           $horaclase = quehora($hora, $min);
-            $currentDate = conversorDia($dia);
-            if($hora>24 or $hora<0 or $min<0 or $min>60){
+           $diaActual = date("N");
+           $horaActual = date("G")-1;
+           $minActual = date("i");
+           $horaclase = quehora($horaActual, $minActual);
+            if($horaActual>24 or $horaActual<0 or $minActual<0 or $minActual>60){
                  echo("Los datos de la hora introducidos son incorrectos.");
             }else{
                 if($horaclase==0){
@@ -69,21 +73,25 @@
                 }elseif($horaclase==7){
                     echo ("La hora introducida no es horario escolar.");
                 }else{
-                    if($dia == "Lunes" or $dia =="lunes"){
-                         print_r($Horario["Lunes"][$horaclase]);
-                    }elseif($dia == "Martes" or $dia =="martes"){
+                    if($diaActual == 1){
+                        echo("Clase actual: ");
+                        print_r($Horario["Lunes"][$horaclase]);
+                    }elseif($diaActual == 3){
                         print_r($Horario["Martes"][$horaclase]);
                     
-                    }elseif($dia == "Miércoles" or $dia =="miércoles"){
+                    }elseif($diaActual == 3){
+                        echo("Clase actual: ");
                         print_r($Horario["Miércoles"][$horaclase]);
 
-                    }elseif($dia == "Jueves" or $dia =="jueves"){
+                    }elseif($diaActual == 4){
+                        echo("Clase actual: ");
                         print_r($Horario["Jueves"][$horaclase]);
                     
-                    }elseif($dia == "Viernes" or $dia =="viernes"){ 
+                    }elseif($diaActual == 5){
+                        echo("Clase actual: "); 
                         print_r($Horario["Viernes"][$horaclase]);
                     
-                    }elseif($dia == "Sábado" or $dia =="sabado" or $dia == "Domingo" or $dia =="domingo"){
+                    }elseif($diaActual == 6 or $diaActual == 7){
                         echo("El día introducido no hay clases");
                     }else
                     echo("No se reconoce el día introducido");
@@ -91,6 +99,7 @@
             }
         }
 
+//Función auxiliar para saber en que clase del día se encuentra según la hora
         function queHora($hora, $min){
             $horatotal = ($hora * 100) + $min;
             if($horatotal>=800 and $horatotal<855){
@@ -111,38 +120,8 @@
                 return 7;
         }
 
-// prueba del método queclase con datos introducidos manualmente queClase("Lunes", 23,5)
-
-$diaActual = date("N");
-$horaActual = date("G");
-$minActual = date("i");
-
-function conversorDia($dia){
-    $quedia;
-    if($dia==1){
-       $quedia = "Lunes";
-       return $quedia;
-    }elseif($dia==2){
-        $quedia = "Martes";
-        return $quedia;
-
-    }elseif($dia==3){
-        $quedia = "Miércoles";
-        return $quedia;
-
-    }elseif($dia==4){
-        $quedia = "Jueves";
-        return $quedia;
-
-    }elseif($dia==5){
-        $quedia = "Viernes";
-        return $quedia;
-    }else
-        $quedia = "Domingo";
-        return $quedia; 
-    
-}
-//REVISAR LAS ACTUALIZACIONES HECHAS DENTRO DE LA FUNCION 2!
-queClase($diaActual, $horaActual, $minActual)
+//Prueba:
+queClase();
+mostrarhorario()
 ?>
 
