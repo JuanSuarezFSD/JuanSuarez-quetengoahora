@@ -133,7 +133,7 @@
 
 ?>
 <body>
-    <table>
+    <!--<table>
         <tr>
             <th>Hora</th>
             <th>Lunes</th>
@@ -197,8 +197,9 @@
             <td><?php print_r($Horario["Viernes"][6]["Nombre"]."</br> Docente: ".$Horario["Viernes"][6]["Docente"]."</br> Aula: ".$Horario["Viernes"][6]["Aula"])?></td>
 
         </tr>
-    </table>
+    </table>-->
     <br>
     <p><?php queclase()?></p>
+    <p><a target='_blank' href="tabla.php">Quiero ver el horario completo</a></p>
 </body>
 </html>
