@@ -10,45 +10,9 @@
     </head>
     <body>
     <?php
-    $Horario= array(
-        "Lunes"=>array(1=>array("Nombre"=>"Empresa e iniciativa emprendedora","Docente"=>"María del Sol García Tarajano","Aula"=>"201","Hora"=>"1ª"),
-                        2=>array("Nombre"=>"Desarrollo Web en entorno servidor","Docente"=>"Sergio Ramos Suárez","Aula"=>"201","Hora"=>"2ª"),
-                        3=>array("Nombre"=>"Desarrollo Web en entorno servidor","Docente"=>"Sergio Ramos Suárez","Aula"=>"201","Hora"=>"3ª"),
-                        4=>array("Nombre"=>"Desarrollo Web en entorno cliente","Docente"=>"María del Carmen Rodríguez Suárez","Aula"=>"201","Hora"=>"4ª"),
-                        5=>array("Nombre"=>"Desarrollo Web en entorno cliente","Docente"=>"María del Carmen Rodríguez Suárez","Aula"=>"201","Hora"=>"5ª"),
-                        6=>array("Nombre"=>"Desarrollo Web en entorno cliente","Docente"=>"María del Carmen Rodríguez Suárez","Aula"=>"201","Hora"=>"6ª"),
-                    ),
-        "Martes"=>array(1=>array("Nombre"=>"Despliegue de aplicaciones web","Docente"=>"María Antonia Montesdeoca Viera","Aula"=>"201","Hora"=>"1ª"),
-                        2=>array("Nombre"=>"Despliegue de aplicaciones web","Docente"=>"María Antonia Montesdeoca Viera","Aula"=>"201","Hora"=>"2ª"),
-                        3=>array("Nombre"=>"Desarrollo Web en entorno servidor","Docente"=>"Sergio Ramos Suárez","Aula"=>"201","Hora"=>"3ª"),
-                        4=>array("Nombre"=>"Desarrollo Web en entorno servidor","Docente"=>"Sergio Ramos Suárez","Aula"=>"201","Hora"=>"4ª"),
-                        5=>array("Nombre"=>"Diseño de interfaces web","Docente"=>"Ermis Papakonstantinou Baez","Aula"=>"201","Hora"=>"5ª"),
-                        6=>array("Nombre"=>"Diseño de interfaces web","Docente"=>"Ermis Papakonstantinou Baez","Aula"=>"201","Hora"=>"6ª"),
-                    ),
-        "Miércoles"=>array(1=>array("Nombre"=>"Desarrollo Web en entorno cliente","Docente"=>"María del Carmen Rodríguez Suárez","Aula"=>"201","Hora"=>"1ª"),
-                        2=>array("Nombre"=>"Desarrollo Web en entorno cliente","Docente"=>"María del Carmen Rodríguez Suárez","Aula"=>"201","Hora"=>"2ª"),
-                        3=>array("Nombre"=>"Desarrollo Web en entorno servidor","Docente"=>"Sergio Ramos Suárez","Aula"=>"201","Hora"=>"3ª"),
-                        4=>array("Nombre"=>"Desarrollo Web en entorno servidor","Docente"=>"Sergio Ramos Suárez","Aula"=>"201","Hora"=>"4ª"),
-                        5=>array("Nombre"=>"Diseño de interfaces web","Docente"=>"Ermis Papakonstantinou Baez","Aula"=>"201","Hora"=>"5ª"),
-                        6=>array("Nombre"=>"Diseño de interfaces web","Docente"=>"Ermis Papakonstantinou Baez","Aula"=>"201","Hora"=>"6ª"),
-                    ),
-        "Jueves"=>array(1=>array("Nombre"=>"Despliegue de aplicaciones web","Docente"=>"María Antonia Montesdeoca Viera","Aula"=>"201","Hora"=>"1ª"),
-                    2=>array("Nombre"=>"Despliegue de aplicaciones web","Docente"=>"María Antonia Montesdeoca Viera","Aula"=>"201","Hora"=>"2ª"),
-                    3=>array("Nombre"=>"Despliegue de aplicaciones web","Docente"=>"María Antonia Montesdeoca Viera","Aula"=>"201","Hora"=>"3ª"),
-                    4=>array("Nombre"=>"Desarrollo Web en entorno cliente","Docente"=>"María del Carmen Rodríguez Suárez","Aula"=>"201","Hora"=>"4ª"),
-                    5=>array("Nombre"=>"Desarrollo Web en entorno cliente","Docente"=>"María del Carmen Rodríguez Suárez","Aula"=>"201","Hora"=>"5ª"),
-                    6=>array("Nombre"=>"Empresa e iniciativa emprendedora","Docente"=>"María del Sol García Tarajano","Aula"=>"201","Hora"=>"6ª"),
-                ),
-        "Viernes"=>array(1=>array("Nombre"=>"Diseño de interfaces web","Docente"=>"Ermis Papakonstantinou Baez","Aula"=>"201","Hora"=>"1ª"),
-                2=>array("Nombre"=>"Diseño de interfaces web","Docente"=>"Ermis Papakonstantinou Baez","Aula"=>"201","Hora"=>"2ª"),
-                3=>array("Nombre"=>"Despliegue de aplicaciones web","Docente"=>"María Antonia Montesdeoca Viera","Aula"=>"201","Hora"=>"3ª"),
-                4=>array("Nombre"=>"Empresa e iniciativa emprendedora","Docente"=>"María del Sol García Tarajano","Aula"=>"201","Hora"=>"4ª"),
-                5=>array("Nombre"=>"Desarrollo Web en entorno servidor","Docente"=>"Sergio Ramos Suárez","Aula"=>"201","Hora"=>"5ª"),
-                6=>array("Nombre"=>"Desarrollo Web en entorno servidor","Docente"=>"Sergio Ramos Suárez","Aula"=>"201","Hora"=>"6ª"),
-            ),
-        );
+    
 ?>
-        <table>
+        <table><?php include 'main.php'?>
         <tr>
             <th>Hora</th>
             <th>Lunes</th>
