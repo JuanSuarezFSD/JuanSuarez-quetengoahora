@@ -6,13 +6,13 @@
 
 <form action="/action_page.php">
   <select name="horario" id="horario">
-    <optgroup label="Grupos">
+    <optgroup label="Según el grupo:">
       <option value="DAW">2 DAW M</option>
       <option value="DAM">2 DAM M</option>
     </optgroup>
-    <optgroup label="Docente">
-      <option value="Sergio">Sergio Ramos</option>
-      <option value="Ermis">Ermis Griego</option>
+    <optgroup label="Según el docente:">
+      <option value="Sergio">Sergio Ramos Suárez</option>
+      <option value="Ermis">Maria del Carmen Rodriguez Suárez</option>
     </optgroup>
   </select>
   <br><br>
