@@ -12,7 +12,17 @@
     <?php
     
 ?>
-        <table><?php include 'main.php'?>
+        <table>
+            <?php
+                if($_POST["horario"]=="DAW"){
+                    include 'HORARIO2DAW.php';
+                }elseif($_POST["horario"]=="DAM"){
+                    include 'HORARIO2DAM.php';
+                }elseif($_POST["horario"]=="Sergio"){
+                    include 'HORARIOSERGIO.php';
+                }else
+                include 'HORARIOMARIA.php';
+            ?>
         <tr>
             <th>Hora</th>
             <th>Lunes</th>
